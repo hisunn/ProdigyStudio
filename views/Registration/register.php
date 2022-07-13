@@ -34,9 +34,9 @@ if (isset($_POST['reg_user_organizer'])) {
 		<?php if (isset($_GET['error'])) {
 			echo '<h1 class=""; >' . $_GET['error'] . '</h1>';
 		} ?>
-		<div class="h-screen bg-gradient-to-tr from-blue-800 to-purple-700 flex justify-center items-center">
-			<div class="2xl:w-2/5 w-full 2xl:my-40">
-				<form class="bg-white p-10 rounded-lg shadow-lg min-w-full my-28" method="POST" action="">
+		<div class="h-full 2xl:h-screen bg-gradient-to-tr from-blue-800 to-purple-700 flex justify-center items-center">
+			<div class="2xl:w-2/5 2xl:my-40 ">
+				<form class="bg-white p-10 rounded-lg shadow-lg min-w-full my-5 2xl:my-0" method="POST" action="">
 
 					<?php if ($_GET['user'] == 'ticketer') { ?>
 						<h2 class="inline-block text-5xl font-bold text-gray-900">Create Account</h2><a href="../index.php"><img class="inline-block mb-5 ml-auto lg:ml-56 border-2  hover:border-black transition-all rounded-full w-0 xl:w-24" src="../../Img/prodigyLogo_Black.png" alt="logo"></a><br>
