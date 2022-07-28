@@ -16,7 +16,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="Img/readmeLogo.jpg" alt="Logo" width="80" height="80" style="border-radius:100%">
+    <img src="Img/readmeLogo.jpg" alt="Logo" width="80" height="80" style="border-radius:50%">
   </a>
 
   <h3 align="center">Prodigy Studio Musical Management System</h3>
@@ -35,7 +35,7 @@
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
-  <ol>
+  <ol>  
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
