@@ -23,8 +23,6 @@
   <p align="center">
     A musical management system specifically made for a local music studio located in Kajang, Selangor
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href="https://prodigystudio.live">View Demo (Active until 24/7/2022)</a>  
   </p>
@@ -118,13 +116,9 @@ _Below is the steps that should help you setup the system locally_
 
 letak gamba plis
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
