@@ -28,37 +28,21 @@ class viewEvents
         $ticketsold = $quantity_input;
         $profit = $ticketsold * $price;
         // collect month column from profitbymonth table
-        $query = "SELECT $currentmonth FROM profitbymonth WHERE username = '$username' LIMIT 1";
-        // var_dump($query);
-        // die();
+        $query = "SELECT $currentmonth FROM profitbymonth WHERE username = '$username' LIMIT 1";      
         $result = $conn->query($query);
         foreach ($result as $result) {
             $monthlyprofit = $result[$currentmonth];
         }
         $monthlyprofit =  $monthlyprofit + $profit;
-        // echo $monthlyprofit;
-        // die();
-        // var_dump($monthlyprofit);
-
-
         $query = "SELECT username FROM profitbymonth WHERE username = '$username' LIMIT 1;";
-        // echo $monthlyprofit;
-        // var_dump($query);
-        // die();
         $result = $conn->query($query);
         if ($result->num_rows == 1) {
             $query = "UPDATE profitbymonth SET  $currentmonth = '$monthlyprofit'  WHERE username = '$username' LIMIT 1;";
-            // var_dump($query);
-            // die();
             $result = $conn->query($query);
         } else {
             $query = "INSERT INTO profitbymonth (username,$currentmonth) VALUES ('$username','$monthlyprofit');";
-            // var_dump($query);
-            // die();
             $result = $conn->query($query);
         }
-
-
         $conn->close();
     }
 
@@ -67,55 +51,35 @@ class viewEvents
     {
         include $_SERVER['DOCUMENT_ROOT'] . "/DB/db.php";
         $totalprofit = null;
-        $totalticket = null;
-        // collect price and ticket left from db
+        $totalticket = null;       
         $query = "SELECT price,quantity_left FROM ticket WHERE event_id = '$event_id' LIMIT 1";
         $result = $conn->query($query);
         foreach ($result as $result) {
             $price = $result['price'];
             $quantity_left = $result['quantity_left'];
-        }
-        // calculate profit made and ticket sold for this event
+        }      
         $ticketsold = $quantity_input;
-        $profit = $ticketsold * $price;
-        // echo $ticketsold . " UNTUNG LA1";
-        // die();
-        // collect username from events table
+        $profit = $ticketsold * $price;     
         $query = "SELECT created_by FROM events WHERE event_id = '$event_id' LIMIT 1;";
         $result = $conn->query($query);
         foreach ($result as $result) {
-            $username = $result['created_by'];
-            // echo $username.$profit.$ticketsold." UNTUNG LA";
-            // die();
+            $username = $result['created_by'];           
         }
-        // collect total profit and total ticket sold from profit table
         $query = "SELECT total_profit,total_ticket FROM profit WHERE username = '$username' LIMIT 1;";
         $result = $conn->query($query);
-
         foreach ($result as $result) {
             $totalprofit = $result['total_profit'];
             $totalticket = $result['total_ticket'];
-        }
-
-        // echo "Event profit: ".$profit ." This event bought ticket: ". $ticketsold;
+        }       
         $totalprofit = $totalprofit + $profit;
         $totalticket =  $totalticket + $ticketsold;
-        // echo  "<br>Total profit: ".$totalprofit ." Total tiket: ".$totalticket;
-        // die();
-
-
         $query = "SELECT username FROM profit WHERE username = '$username ' LIMIT 1;";
         $result = $conn->query($query);
-
         if ($result->num_rows == 1) {
             $query = "UPDATE profit SET total_profit=' $totalprofit',total_ticket='$totalticket' WHERE username = '$username'";
-            // var_dump($query);
-            // die();
             $result = $conn->query($query);
         } else {
             $query = "INSERT INTO profit (total_profit,total_ticket, username) VALUES ('$totalprofit','$totalticket','$username');";
-            // var_dump($query);
-            // die();
             $result = $conn->query($query);
         }
         $conn->close();
@@ -209,12 +173,7 @@ class viewEvents
     {
         include $_SERVER['DOCUMENT_ROOT'] . "/DB/db.php";
         $query = "INSERT INTO ticketreceipt (event_id,transaction_id,billcode,order_id,status_id,total_paid,username,quantity) VALUES('$event_id','$transaction_id','$billcode','$order_id','$status_id','$price','$username','$quantity_input')";
-        $conn->query($query);
-
-        // if ($status_id == '1') {
-        //     $query = "UPDATE events SET event_status = 'Published' WHERE event_id = '$event_id';";
-        //     $conn->query($query);
-        // }
+        $conn->query($query);      
     }
 
     public function viewSearch($tempsearch)
@@ -228,7 +187,6 @@ class viewEvents
         if ($result->num_rows > 0) {
             return $result;
         } else {
-            
             return false;
         }
     }

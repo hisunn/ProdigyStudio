@@ -1,15 +1,8 @@
 <?php
-
 use module\viewEvents\viewEvents\viewEvents\viewEvents as ViewEvents;
-
 require "../module/viewEvents/viewEvents.php";
-
-
-
 if (isset($_GET['page'])) {
-
     if ($_GET['page'] == 'finished') {
-
         $username = $_GET['username'];
         $event_id = $_GET['eid'];
         $event_title = $_GET['title'];
@@ -22,12 +15,10 @@ if (isset($_GET['page'])) {
         $quantity =  $_GET['quantity'];
         $quantity_left =  $_GET['quantity_left'];
         $quantity_input = $_GET['quantity_input'];
-
         if($status_id == '3'){
         header('location:../views/viewTicket/ticketlist.php');
         die();
        }
-
         $ticket = new viewEvents();
         $ticket->updateTicketQuantity($quantity, $quantity_left, $quantity_input, $event_id);
         $ticket->insertTicketProfit($quantity, $quantity_input, $event_id);
@@ -36,6 +27,3 @@ if (isset($_GET['page'])) {
         header('location:../views/viewTicket/receipt.php?eid=' . $event_id);
     }
 }
-
-
-

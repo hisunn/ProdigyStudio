@@ -2,8 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
-      <title>Send Reset Password Link with Expiry Time in PHP MySQL</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">         
        <!-- CSS -->
        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">

@@ -1,8 +1,6 @@
 <?php
 include "pb.php";
 ?>
-
-
 <!-- component -->
 <div <?php if (isset($_GET['page'])) {
         if ($_GET['page'] == 'finished') {

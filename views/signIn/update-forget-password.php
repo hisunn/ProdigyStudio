@@ -3,8 +3,7 @@
 <head>
      <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
-      <title>Send Reset Password Link with Expiry Time in PHP MySQL</title>
-       <!-- CSS -->
+        <!-- CSS -->
        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
        <link rel="shortcut icon" href="../../Img/prodigyLogo_Black_.svg" type="image/x-icon">
@@ -12,11 +11,6 @@
     <title>Prodigy Studio</title>
 </head>
 <body>
-    
-
-
-
-
 <?php
 if(isset($_POST['password']) && $_POST['reset_link_token'] && $_POST['email'])
 {

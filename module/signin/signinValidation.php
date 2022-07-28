@@ -1,20 +1,14 @@
 <?php
 session_start();
 include $_SERVER['DOCUMENT_ROOT']."/DB/db.php";
-
 $query = "DELETE FROM events WHERE DATEDIFF(NOW(), events.date) > 1";
 $result = $conn->query($query);
-
-
-
 if (isset($_POST['login_user'])) {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     $username = stripcslashes($username);
     $password = stripcslashes($password);
     $password = md5($password);
-
-
 
     if (empty($username)) {        
         header('location:../../views/signIn/signin.php');
@@ -32,9 +26,6 @@ if (isset($_POST['login_user'])) {
             if ($result) {
                 $row = mysqli_fetch_assoc($result);
                 $user_type = $row['usertype'];
-
-
-
 
                 if ($user_type == 'admin') {
                     $_SESSION['username'] = $username;

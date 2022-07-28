@@ -1,10 +1,7 @@
 <?php
-
 use module\viewEvents\viewEvents\viewEvents\viewEvents;
-
 include "../Template/header.php";
 if (empty($_SESSION['username'])) {
-    // header('location:../Registration/register.php?user=ticketer');
     echo "<script>location.href='../Registration/register.php?user=ticketer'</script>";
 }
 require "../../DB/db.php";
@@ -14,19 +11,12 @@ $event = $_event->displayTicketDetail($_GET['eid']);
 $ticket = $_event->displayTicketInfo($_GET['eid']);
 $user = $_event->retrieveUser($_SESSION['username']);
 
-// if (isset($_SESSION['username']) == null) {
-
-//     header('location:../Registration/register.php');
-// }   
 foreach ($user as $user) {
     $username = $user['username'];
     $firstname = $user['first_name'];
     $lastname = $user['last_name'];
     $email = $user['email'];
-
-    //    echo $username;
 }
-
 
 foreach ($ticket as $ticket) {
     $ticketname = $ticket['ticketname'];
@@ -35,20 +25,14 @@ foreach ($ticket as $ticket) {
     $price = $ticket['price'];
     $quantity_left = $ticket['quantity_left'];
 }
-
-
 ?>
-
-
 <div class="my-36">
     <form action="../../module/payment/generate-gateway-payment-call.php" method="post">
-
         <input name="username" type="text" hidden value="<?= $username ?>">
         <input name="event_id" type="text" hidden value="<?= $_GET['eid'] ?>">
         <input name="totalprice" type="text" hidden value="<?= $price ?>">
         <input name="quantity" type="text" hidden value="<?= $quantity ?>">
         <input name="quantity_left" type="text" hidden value="<?= $quantity_left ?>">
-
         <div x-data="{sliderMax:0,slider1:0,slider2:0,slider3:0,slider4:0,slider5:0,}" class="relative px-6 pt-10 pb-8 bg-white shadow-xl ring-1 ring-gray-900/5 max-w-4xl sm:mx-auto sm:rounded-lg sm:px-10 ">
             <?php
             if (!empty($event)) {
@@ -113,18 +97,12 @@ foreach ($ticket as $ticket) {
                    <?php     }else{ ?>
                      <button disabled type="button" name="ticket_btn" class="cursor-pointer text-center w-96 px-5 py-3  bg-gray-200 border-gray-300 text-white rounded transition duration-300  focus:outline-none max-w-xs">SOLD OUT</button>
                  <?php  } ?>
-                       
-                        
                     </div>
             <?php endforeach;
             } ?>
         </div>
     </form>
-
 </div>
-
-
-
 <?php
 include "../Template/footer.php";
 ?>

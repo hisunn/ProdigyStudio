@@ -36,10 +36,6 @@ foreach ($result  as $month) {
   $november = $month['november'];
   $december = $month['december'];
 }
-
-// var_dump($january);
-
-// echo lcfirst(date("F"));
 ?>
 
 <style>
@@ -206,7 +202,6 @@ foreach ($result  as $month) {
                     $status = $row["event_status"];
                     $id = $row["event_id"];
                     $slot = $row['slots'];
-
                     ?>
 
                     <tr class="border-b">
@@ -219,8 +214,7 @@ foreach ($result  as $month) {
                       </td>
                       <td><?= $status ?></td>
                       <td>
-                        <div class="lg:mx-10 mx-auto">
-                          <!-- <button x-on:click="dropdown =!dropdown" class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all"><i class="bi bi-three-dots-vertical"></i></button> -->
+                        <div class="lg:mx-10 mx-auto">                      
                           <div class="flex-col justify-center m-2">
                               <?php if ($status == 'Published') { ?>
                             <a class="text-center transition-all mb-1 block bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white px-1 border border-blue-500 hover:border-transparent rounded" href="../viewEvent/eventdetail.php?eid=<?= $id ?>">View</a>
@@ -301,19 +295,13 @@ foreach ($result  as $month) {
               }
                 ?>
             </table>
-
-
           </div>
         </div>
-
-
       </div>
     </div>
 </div>
 </div>
 </section>
-
-
 </body>
 
 <script>

@@ -1,7 +1,5 @@
     <?php
     date_default_timezone_set("Asia/Kuala_Lumpur");
-
-    // require_once __DIR__ . '/vendor/autoload.php';
     require_once '../../vendor/autoload.php';
     $event_title = $_POST['event_title'];
     $event_id = $_POST['event_id'];
@@ -13,11 +11,7 @@
     $total_paid = $_POST['total_paid'];
     $quantity = $_POST['quantity'];
 
-
-
     if (isset($_POST['receipt_btn'])) {
-
-
         $mpdf = new \Mpdf\Mpdf();
         $mpdf->curlAllowUnsafeSslRequests = true;
         $stylesheet = file_get_contents('cuba.css');

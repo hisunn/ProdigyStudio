@@ -12,34 +12,29 @@ define('name', 'Prodigy Studio');
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!-- using the third party API that are not controlled by us  -->
   <script src="https://cdn.tiny.cloud/1/oyc8ug17t9qb18bib51wxeyczua0yjkw9hnhoztwgiautrur/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script> -->
   <link rel="stylesheet" href="../../node_modules/jquery-ui-1.13.1/jquery-ui.css">
   <script src="../../node_modules/jquery-ui-1.13.1/jquery-ui.js"></script>
   <link href="http://fonts.cdnfonts.com/css/harlow-solid-italic" rel="stylesheet">
   <script src="../../node_modules/alpinejs/dist/cdn.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js" integrity="sha256-ErZ09KkZnzjpqcane4SCyyHsKAXMvID9/xwbl/Aq1pc=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-  <!-- banner -->
-
-
-<script>
+  <script>
     tinymce.init({
       selector: '#mytextarea',
       plugins: 'advlist autolink lists link image charmap preview anchor pagebreak code visualchars wordcount',
-	  setup: function(editor) {
-	  	var max = 150;
-	    editor.on('submit', function(event) {
-		  var numChars = tinymce.activeEditor.plugins.wordcount.body.getCharacterCount();
-		  if (numChars > max) {
-			alert("Maximum " + max + " characters allowed.");
-			event.preventDefault();
-			return false;
-		  }
-		});
-	  }
-   });
-</script>
+      setup: function(editor) {
+        var max = 150;
+        editor.on('submit', function(event) {
+          var numChars = tinymce.activeEditor.plugins.wordcount.body.getCharacterCount();
+          if (numChars > max) {
+            alert("Maximum " + max + " characters allowed.");
+            event.preventDefault();
+            return false;
+          }
+        });
+      }
+    });
+  </script>
   <script>
     $(document).ready(function() {
       $("#btn_sidebar").click(function() {
@@ -68,36 +63,25 @@ define('name', 'Prodigy Studio');
             $("#slider-1").delay(400).fadeIn(400);
             $("#sButton2").removeClass("bg-purple-800");
             $("#sButton1").addClass("bg-purple-800");
-
             cont = 0;
-
             break;
           }
-
-
         }
       }, 8000);
-
     }
 
     function reinitLoop(time) {
       clearInterval(xx);
       setTimeout(loopSlider(), time);
     }
-
-
-
     function sliderButton1() {
-
       $("#slider-2").fadeOut(400);
       $("#slider-1").delay(400).fadeIn(400);
       $("#sButton2").removeClass("bg-purple-800");
       $("#sButton1").addClass("bg-purple-800");
       reinitLoop(6000);
       cont = 0
-
     }
-
     function sliderButton2() {
       $("#slider-1").fadeOut(400);
       $("#slider-2").delay(400).fadeIn(400);
@@ -105,21 +89,11 @@ define('name', 'Prodigy Studio');
       $("#sButton2").addClass("bg-purple-800");
       reinitLoop(4000);
       cont = 1
-
     }
-
     $(window).ready(function() {
       $("#slider-2").hide();
       $("#sButton1").addClass("bg-purple-800");
-
-
       loopSlider();
-
-
-
-
-
-
     });
   </script>
 
@@ -127,26 +101,21 @@ define('name', 'Prodigy Studio');
     * {
       box-sizing: border-box;
     }
-
     body {
       font-family: Verdana, sans-serif;
     }
-
     .mySlides {
       display: none;
     }
-
     img {
       vertical-align: middle;
     }
-
     /* Slideshow container */
     .slideshow-container {
       max-width: 1000px;
       position: relative;
       margin: auto;
     }
-
     /* Caption text */
     .text {
       color: #f2f2f2;
@@ -157,7 +126,6 @@ define('name', 'Prodigy Studio');
       width: 100%;
       text-align: center;
     }
-
     /* Number text (1/3 etc) */
     .numbertext {
       color: #f2f2f2;
@@ -166,7 +134,6 @@ define('name', 'Prodigy Studio');
       position: absolute;
       top: 0;
     }
-
     /* The dots/bullets/indicators */
     .dot {
       height: 15px;
@@ -177,35 +144,29 @@ define('name', 'Prodigy Studio');
       display: inline-block;
       transition: background-color 0.6s ease;
     }
-
     .active {
       background-color: #717171;
     }
-
     /* Fading animation */
     .fade {
       animation-name: fade;
       animation-duration: 1.5s;
     }
-
     @keyframes fade {
       from {
         opacity: .4
       }
-
       to {
         opacity: 1
       }
     }
-
     /* On smaller screens, decrease text size */
     @media only screen and (max-width: 300px) {
       .text {
         font-size: 11px
       }
-    }
+    }    
   </style>
-
   <link href="/dist/output.css" rel="stylesheet">
   <script src="/node_modules/chart.js/dist/chart.min.js"></script>
   <link rel="shortcut icon" href="../../Img/prodigyLogo_Black_.svg" type="image/x-icon">
@@ -214,23 +175,18 @@ define('name', 'Prodigy Studio');
     [x-cloak] {
       display: none;
     }
-
     .duration-300 {
       transition-duration: 300ms;
     }
-
     .ease-in {
       transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     }
-
     .ease-out {
       transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
-
     .scale-90 {
       transform: scale(.9);
     }
-
     .scale-100 {
       transform: scale(1);
     }
@@ -358,37 +314,64 @@ define('name', 'Prodigy Studio');
 
           </div>
           <div class="flex ml-10 sm:ml-0 space-x-6">
-            <?php if (isset($_SESSION['username']) == null) { ?>
-              <span class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/viewEvent/eventpage.php?sort=all">Browse Events</a> </span>
-              <span class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/Registration/register.php?user=ticketer">Sign up</a></span>
-              <span class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/signIn/signin.php">Log in</a> </span>
-            <?php } ?>
+            <div class="sm:hidden">
+              <select onchange="location = this.value;" id="redirect" class="ml-5 cursor-pointer border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none w-full">
+                <option class="text-center" value="all"><b>&nbsp;&nbsp;&nbsp;&nbsp;&#9679;&#9679;&#9679;</b>
+                </option>
+                <option class="text-center" value="views/viewEvent/eventpage.php?sort=all">Browse Event</option>
+                <option class="text-center" value="views/Registration/register.php">Sign Up</option>
+                <option class="text-center" value="views/signIn/signin.php">Login</option>
+              </select>
+            </div>
+            <script>
+              function redirect() {
+                let page = document.getElementById("redirect").value;
+                if (page == "b_event") {
+                  location.href = "/viewEvent/eventpage.php?sort=all";
+                }
+                if (page == "s_up") {
+                  location.href = "./Registration/register.php";
+                }
+                if (page == "s_in") {
+                  location.href = "./signIn/signin.php";
+                }
+              }
+            </script>
 
-            <?php if (isset($_SESSION['username']) != null) { ?>
-              <span <?php echo "hidden"; ?> class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/viewEvent/eventpage.php?sort=all">Browse Events</a> </span>
-              <span <?php echo "hidden"; ?> class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/registration/register.php">Sign up</a></span>
-              <span <?php echo "hidden"; ?> class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/signin.php">Log in</a> </span>
-            <?php } ?>
-            <?php
-            if (isset($_SESSION['username']) != null) { ?>
-              <span class="text-black-500 text-md"><?= "Hello " . $_SESSION['username']; ?></span>
-              <?php if ($_SESSION['usertype'] == 'admin' || $_SESSION['usertype'] == 'organizer') {    ?>
-                <?php if ($_SESSION['usertype'] == 'admin') {    ?>
-                  <span class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/admin/administrator.php">Dashboard</a> </span>
-                <?php } ?>
-                <span class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/manageEvent/eventcreationmain.php">Manage Events</a> </span>
-              <?php  } ?>
-              <span class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/viewEvent/eventpage.php?sort=all">Browse Events</a> </span>
-              <?php if ($_SESSION['usertype'] == 'organizer' || $_SESSION['usertype'] == 'ticketer') { ?>
+            <div class="hidden sm:block">
 
-                <span class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/viewTicket/ticketlist.php">View Tickets</a> </span>
-              <?php  } ?>
+              <?php if (isset($_SESSION['username']) == null) { ?>
+                <span class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/viewEvent/eventpage.php?sort=all">Browse Events</a> </span>
+                <span class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/Registration/register.php?user=ticketer">Sign up</a></span>
+                <span class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/signIn/signin.php">Log in</a> </span>
+              <?php } ?>
 
-              <span> <a class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all" href="../signout.php">Sign Out</a> </span>
+              <?php if (isset($_SESSION['username']) != null) { ?>
+                <span <?php echo "hidden"; ?> class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/viewEvent/eventpage.php?sort=all">Browse Events</a></span>
+                <span <?php echo "hidden"; ?> class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/registration/register.php">Sign up</a></span>
+                <span <?php echo "hidden"; ?> class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/signin.php">Log in</a> </span>
+              <?php } ?>
+              <?php
+              if (isset($_SESSION['username']) != null) { ?>
+                <span class="text-black-500 text-md"><?= "Hello " . $_SESSION['username']; ?></span>
+                <?php if ($_SESSION['usertype'] == 'admin' || $_SESSION['usertype'] == 'organizer') {    ?>
+                  <?php if ($_SESSION['usertype'] == 'admin') {    ?>
+                    <span class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/admin/administrator.php">Dashboard</a> </span>
+                  <?php } ?>
+                  <span class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/manageEvent/eventcreationmain.php">Manage Events</a> </span>
+                <?php  } ?>
+                <span class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/viewEvent/eventpage.php?sort=all">Browse Events</a> </span>
+                <?php if ($_SESSION['usertype'] == 'organizer' || $_SESSION['usertype'] == 'ticketer') { ?>
 
-            <?php
-            }
-            ?>
+                  <span class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all"><a href="/views/viewTicket/ticketlist.php">View Tickets</a> </span>
+                <?php  } ?>
+
+                <span> <a class="text-gray-800 text-md text-center hover:text-white hover:bg-gray-800 rounded-full px-3 transition-all" href="../signout.php">Sign Out</a> </span>
+
+              <?php
+              }
+              ?>
+            </div>
           </div>
         </div>
       </div>

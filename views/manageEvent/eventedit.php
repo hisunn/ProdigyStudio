@@ -2,7 +2,6 @@
 include "../../DB/db.php";
 include "../Template/header.php";
 ?>
-
 <?php
 include $_SERVER['DOCUMENT_ROOT']."/DB/db.php";
 $id = $_GET['eid'];
@@ -26,31 +25,22 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
-
-
 <section x-data="{ 'showModal': false }" @keydown.escape="showModal = false" x-cloak>
     <form onload="display();" action="../../controller/manageEventController.php" method="POST" enctype="multipart/form-data">
         <div class="my-20">
-
             <div class="relative px-6 pt-10 pb-8 bg-white shadow-xl ring-1 ring-gray-900/5 max-w-4xl sm:mx-auto sm:rounded-lg sm:px-10 ">
                 <div class="max-w-md mx-auto flex flex-col">
                     <label for="title">Event Title:</label>
                     <input required class="m-4 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" valu id="title" name="title" type="text" value="<?=$title?>" placeholder="Event Title">
-          
-
                     <label for="description">Event Description:</label> <br>
-                    <textarea class="border-2 w-96" name="description" id="mytextarea" name="description" cols="30" rows="10"><?= $descriptions?></textarea> <br>
-                  
+                    <textarea class="border-2 w-96" name="description" id="mytextarea" name="description" cols="30" rows="10"><?= $descriptions?></textarea><br>         
                 </div>
-
             </div>
-
         </div>
         <!--Overlay-->
         <div class="overflow-auto" style="background-color: rgba(0,0,0,0.5)" x-show="showModal" :class="{ 'absolute inset-0 z-10 flex items-center justify-center': showModal }">
             <!--Dialog-->
             <div class="bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg py-4 text-left px-6" x-show="showModal" @click.away="showModal = false" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90">
-
                 <!--Title-->
                 <div class="flex justify-between items-center pb-3">
                     <p class="text-2xl font-bold">Warning <i class="bi bi-exclamation-triangle"></i></p>
@@ -61,19 +51,14 @@ $conn->close();
                         </svg>
                     </div>
                 </div>
-
                 <!-- content -->
                 <p><b>Are you sure you want to update this event ?</b></p>
                 <p>This action is irreversible</p>
-
-
                 <!--Footer-->
                 <div class="flex justify-end pt-2">
                     <button type="submit" name="update_btn" value="<?= $id ?>" class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400" @click="location.href='../../controller/manageEventController.php'">Update</button>
                      <a href="eventcreationmain.php" class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2" @click="showModal = false">Cancel</a>
                 </div>
-
-
             </div>
             <!--/Dialog -->
         </div><!-- /Overlay -->
@@ -83,9 +68,6 @@ $conn->close();
             </a>
         </div>
     </form>
-
 </section>
-
 </body>
-
 </html>

@@ -1,17 +1,11 @@
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
-
-
 require_once '../../vendor/autoload.php';
-
-
 if (isset($_POST['password-reset-token']) && $_POST['email']) {
   include $_SERVER['DOCUMENT_ROOT']."/DB/db.php";
-
   $emailId = $_POST['email'];
    $token = md5($emailId) . rand(10, 9999);
-
     $expFormat = mktime(
       date("H"),
       date("i"),
@@ -20,13 +14,9 @@ if (isset($_POST['password-reset-token']) && $_POST['email']) {
       date("d") + 1,
       date("Y")
     );
-
     $expDate = date("Y-m-d H:i:s", $expFormat);
     $update = mysqli_query($conn, "UPDATE users SET  password='" . $password . "', reset_link_token='" . $token . "' ,exp_date='" . $expDate . "' WHERE email='" . $emailId . "'");
-    // var_dump($update);
-    // die();
  $link = "https://prodigystudio.live/reset-password.php?key=" . $emailId . "&token=" . $token;
-
 ini_set( 'display_errors', 1 );
 error_reporting( E_ALL );
 $from = "admin@prodigystudio.live";

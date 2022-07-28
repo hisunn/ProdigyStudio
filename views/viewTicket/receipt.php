@@ -11,8 +11,6 @@ $query = "SELECT ticketreceipt.transaction_id AS transaction_id,ticketreceipt.bi
 $result = $conn->query($query);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-
-
         $title = $row['title'];
         $transaction_id = $row['transaction_id'];
         $status_id = $row['status_id'];
@@ -20,13 +18,10 @@ if ($result->num_rows > 0) {
         $order_id = $row['order_id'];
         $total_paid = $row['total_paid'];
         $paid_on =  $row['paid_on'];
-        $quantity = $row['quantity'];
-        // date("Y-m-d",$row['paid_on']) . " " . date("h:i:sa",$row['paid_on']) ;
-        // $msg = $_GET['msg'];
+        $quantity = $row['quantity'];       
     }
 }
 ?>
-
 
 <form action="printreceipt.php" method="POST">
     <input name="event_title" hidden type="text" value="<?= $title ?>">

@@ -12,14 +12,9 @@ if (isset($_POST['save_btn4'])) {
   $slot = $_POST['slot'];
   $date = $_POST['date'];
 
-
   if ($slot == 'Slot2') {
     $slot = "Regular Slot";
   }
-  // echo $title . $location . $slot . $date;
-  // var_dump($date);
-  // die();
-
 
   $rmx100 = $harga * 100;
   $some_data = array(
@@ -73,15 +68,6 @@ if (isset($_POST['ticket_btn'])) {
   $quantity = $_POST['quantity'];
   $quantity_left = $_POST['quantity_left'];
   $quantity_input = $_POST['quantity_input'];
-
-  // var_dump($quantity_input);
-  // die();
-
-
-  // var_dump($event_id,$nama,$email,$telefon,$harga,$title,$location );
-  // die();
-
-
 
   $rmx100 = ($harga*$quantity_input) * 100;
   $some_data = array(

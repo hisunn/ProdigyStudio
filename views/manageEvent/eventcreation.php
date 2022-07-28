@@ -1,24 +1,16 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT']."/DB/db.php";
 include "../Template/header.php";
-// include "../Template/sideBar.php";
 include "../Template/progressbar.php";
 ?>
 
 <?php
-
 if (!isset($_SESSION['username'])) {
     echo "<script>location.href = '../index.php'</script>";
 }
-
 if ($_GET['page'] == 'info') {
-
-
 ?>
-
-
     <form class="flex flex-col items-center" action="../../controller/manageEventController.php" enctype="multipart/form-data" method="POST">
-
         <div class="sm:w-5/12">
             <div class=" px-10 pt-10 pb-8 bg-white shadow-xl ring-2  ring-indigo-300  w-full  sm:rounded-lg ">
                 <div>
@@ -42,23 +34,15 @@ if ($_GET['page'] == 'info') {
                             <i hidden id="delete_tag1" class="bi bi-x-circle-fill cursor-pointer"></i><span hidden id="tag_input1" class="ml-4 bg-gray-500 text-white rounded-full text-sm px-3 py-1"></span>
                             <i hidden id="delete_tag2" class="bi bi-x-circle-fill cursor-pointer"></i><span hidden id="tag_input2" class="ml-4 bg-gray-500 text-white rounded-full text-sm px-3 py-1"></span>
                             <i hidden id="delete_tag3" class="bi bi-x-circle-fill cursor-pointer"></i><span hidden id="tag_input3" class="ml-4 bg-gray-500 text-white rounded-full text-sm px-3 py-1"></span>
-
-
-
                         </div>
-
                         <div class="pt-8 text-base leading-7 font-semibold">
-
-
                         </div>
                     </div>
-
                     <script>
                         $(document).ready(function() {
                             let count = 0;
                             let tag1, tag2, tag3;
                             $("#button").click(function() {
-
                                 if (count == 0) {
                                     if ($("#tag_input").val() == '' || $("#tag_input").val() == '#') {
                                         tag1 = "#"+Math.floor(Math.random() * 900)+ $("#tag_input").val();
@@ -108,9 +92,6 @@ if ($_GET['page'] == 'info') {
                                         function(data, status) {
                                             $("#tag_input3").html(data);
                                         });
-
-
-
                                 } else
                                     console.log("banana");
                                 ++count;
@@ -118,12 +99,9 @@ if ($_GET['page'] == 'info') {
                                     $("#button").addClass("bg-gray-200");
                                     $("#button").css("pointer-events", "none");
                                     $("#tag_input").attr("disabled", "true");
-
                                 }
-
                                 console.log(count);
                             });
-
                             $('#delete_tag1').click(function() {
                                 console.log("clicked");
                                 $("#tag_input1").hide();
@@ -136,11 +114,8 @@ if ($_GET['page'] == 'info') {
                                     $("#button").css("pointer-events", "auto");
                                     $("#button").addClass("cursor-pointer");
                                     $("#tag_input").removeAttr("disabled");
-
                                 }
-
                             }); {
-
                             }
                             $('#delete_tag2').click(function() {
                                 console.log("clicked");
@@ -155,9 +130,7 @@ if ($_GET['page'] == 'info') {
                                     $("#button").addClass("cursor-pointer");
                                     $("#tag_input").removeAttr("disabled");
                                 }
-
                             }); {
-
                             }
                             $('#delete_tag3').click(function() {
                                 $("#tag_input3").hide();
@@ -172,29 +145,18 @@ if ($_GET['page'] == 'info') {
                                     $("#button").addClass("cursor-pointer");
                                     $("#tag_input").removeAttr("disabled");
                                 }
-
                             }); {
-
                             }
-
                             // ajax request
-
-
-
                         });
                     </script>
                 </div>
             </div>
-
             <span class="m-2"></span>
-
-
             <div class="px-6 pt-10 pb-8 bg-white shadow-xl ring-2  ring-indigo-300 w-full sm:rounded-lg sm:px-10" x-data="{toggle1: false, toggle2: false, toggle3:false}">
                 <div>
-
                     <div class="text-center">
                         <div class="py-8 text-base leading-7 space-y-6 text-gray-600">
-
                             <h1 class="text-3xl -ml-80"><b>Location</b></h1>
                             <p class="-ml-32">Pick where do you want to held your event</p> <br>
                             <fieldset name="location" id="location" class="py-2 px-3">
@@ -237,29 +199,21 @@ if ($_GET['page'] == 'info') {
                             </fieldset>
                         </div>
                         <div class="pt-8 text-base leading-7 font-semibold">
-
-
                         </div>
                     </div>
                 </div>
             </div>
-
             <span class="m-2"></span>
-
             <div class=" px-6 pt-10 pb-8 bg-white shadow-xl ring-2  ring-indigo-300  sm:rounded-lg sm:px-10">
                 <div class="max-w-md mx-auto">
-
                     <div class="divide-y divide-gray-300/50">
                         <div class="py-8 text-base leading-7 space-y-6 text-gray-600">
-
                             <h1 class="text-3xl"><b>Date and time</b></h1>
                             <p>Specify when your event will be held, when its starting and ending.</p> <br>
-                            <label class="text-base" for="date"><b>Date</b></label> <br>
-                            <!-- <input class="border-2 py-2 px-3 mt-4 w-48" type="date" name="date" id="">  -->
+                            <label class="text-base" for="date"><b>Date</b></label> <br>                           
                             <script>
                                 // nnti dri db push masuk array unavilable Dates
                                 var unavailableDates = ["", "", ""];
-
                                 function unavailable(date) {
                                     dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
                                     if ($.inArray(dmy, unavailableDates) == -1) {
@@ -276,7 +230,6 @@ if ($_GET['page'] == 'info') {
                                         maxDate: "+2W"
                                     });
                                 });
-
                                 function getDate() {
                                     let jsDate = $("#datepicker").datepicker('getDate');
                                     console.log(jsDate.toString());
@@ -374,8 +327,6 @@ if ($_GET['page'] == 'info') {
                     <div class="divide-y divide-gray-300/50">
                         <div class="py-8 text-base leading-7 space-y-6 text-gray-600">
                             <div class="max-w-full mx-auto">
-
-
                                 <h1 class="text-3xl"><b>Description</b></h1> <br>
                                 <p>Add the event description.</p> <br>
                                 <div class="max-w-full mx-auto">
@@ -393,14 +344,8 @@ if ($_GET['page'] == 'info') {
                         Save & Continue
                     </button>
                 </div>
-
             </div>
-
     </form>
-
-
-
-
 <?php
 } elseif ($_GET['page'] == 'ticket') {
 ?>
@@ -429,10 +374,7 @@ if ($_GET['page'] == 'info') {
                 if ($result->num_rows > 0) {    
                     while ($row = $result->fetch_assoc()) {
                         $title = $row['title'];
-                        // echo $title; 
-
                 ?>
-
                         <?php
                         if (isset($_SESSION['eid'])) { ?>
                             <div x-data="{sliderMax:0,slider1:0,slider2:0,slider3:0,eventName:'<?= $title ?>'}">
@@ -443,13 +385,11 @@ if ($_GET['page'] == 'info') {
                                         if(isset($_GET['error'])){
                                             
                                             echo "<h1 class='text-center text-red-700 text-xl'> ".$_GET['error'] . " </h1>";
-                                        }
-                                        
+                                        }                                        
                                         ?>
                                         <h1 class="text-3xl"><b>Ticket Details</b></h1>
                                         <h1 class="text-xl"><b>Event / Ticket Banner</b></h1>
                                         <p>Upload your event thumbnails here.</p> <br>
-
                                         <div align="center">
                                             <div>
                                                 <div class="image_area">
@@ -486,13 +426,9 @@ if ($_GET['page'] == 'info') {
                                         </div>
                                         <script>
                                             $(document).ready(function() {
-
                                                 var $modal = $('#modal');
-
                                                 var image = document.getElementById('sample_image');
-
                                                 var cropper;
-
                                                 $('#upload_image').change(function(event) {
                                                     var files = event.target.files;
 
@@ -526,7 +462,6 @@ if ($_GET['page'] == 'info') {
                                                         width: 400,
                                                         height: 400
                                                     });
-
                                                     canvas.toBlob(function(blob) {
                                                         url = URL.createObjectURL(blob);
                                                         var reader = new FileReader();
@@ -539,26 +474,20 @@ if ($_GET['page'] == 'info') {
                                                                 data: {
                                                                     image: base64data,
                                                                     id: '<?= $str ?>',
-
                                                                 },
                                                                 success: function(data) {
                                                                     $modal.modal('hide');
                                                                     console.log(data);
                                                                     $('#uploaded_image').attr('src', data);
-
                                                                 }
                                                             });
-
-
                                                         };
                                                     });
                                                 });
-
                                             });
                                         </script>
                                         <!-- end banner upload with crop -->
                                         <h1 class="text-xl"><b>Ticket Information </b></h1>
-
                                         <p>Ticket Name:</p>
                                         <input x-text="eventName" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="useEventName" name="ticketname" type="text" placeholder="Ticket Name: <?= $title ?>">
                                         <input type="checkbox" name="useEventName" id="" onclick="toggleName(this.checked)">
@@ -569,8 +498,6 @@ if ($_GET['page'] == 'info') {
 
                                                 } else
                                                     document.getElementById("useEventName").value = "";
-
-
                                             }
                                         </script>
                                         <label for="useEventName"><i>Use event name</i></label>
@@ -595,11 +522,8 @@ if ($_GET['page'] == 'info') {
                                     <input type="text" x-model="sliderMax" class="w-6 border-2 text-center" disabled>
                                     <p>Ticket Price:</p>
                                     <input required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="price" name="price" type="number" step="0.01" placeholder="RM 0.00">
-
-
                                     </div>
                                     <div class="pt-8 text-base leading-7 font-semibold flex justify-center">
-
                                     </div>
                                 </div>
                             </div>
@@ -607,7 +531,6 @@ if ($_GET['page'] == 'info') {
                 } ?>
             </div>
         </div>
-
         <div class="flex justify-center">
                <a href='../../controller/manageEventController.php?delete_draft_btn=true' name="delete_draft_btn" value="Draft" class="m-4 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow transition-all">
                 Discard
@@ -617,8 +540,6 @@ if ($_GET['page'] == 'info') {
             </button>
         </div>
     </form>
-
-
     <?php
 } elseif ($_GET['page'] == 'preview') {
 
@@ -787,8 +708,7 @@ if ($_GET['page'] == 'info') {
                         <input name="event_id" hidden type="text" value="<?= $id ?>">
                         <input name="title" hidden type="text" value="<?= $title ?>">
                         <hr>
-                        <div class="max-w-md mx-auto flex">
-                            <!-- <img class="relative right-48 object-cover w-full h-96 rounded-t-lg md:h-auto md:w-96 md:rounded-none md:rounded-l-lg " src="../../module/manageEvents/bannerUploads/<?= $banner ?>" alt="BannerImage"> -->
+                        <div class="max-w-md mx-auto flex">                           
                             <div class="relative right-36">
                                 <div class=" text-base leading-7 space-y-6 text-gray-600 w-96">
                                     <!-- <p><?= $descriptions ?></p> -->
@@ -819,25 +739,19 @@ if ($_GET['page'] == 'info') {
                                         $row['last_name'];
                                         $row['email'];
                                     }
-                                    ?>
-                                    
+                                    ?>                                    
                                     <script>
                                         function toggleName1(togglecheck) {
                                             if (togglecheck == true) {
                                                 let eventname = document.getElementById("name").value = "<?= $row['first_name'] . " " . $row['last_name'] ?>";
-
                                             } else
                                                 document.getElementById("name").value = "";
-
                                         }
-
                                         function toggleName2(togglecheck) {
                                             if (togglecheck == true) {
                                                 let eventname = document.getElementById("email").value = "<?= $row['email'] ?>";
-
                                             } else
                                                 document.getElementById("email").value = "";
-
                                         }
                                     </script>
                                     <h2 class="text-base"><b>Phone Number: </b> </h2>
@@ -871,23 +785,15 @@ if ($_GET['page'] == 'info') {
         $result = $conn->query($query);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-
-
                 $title = $row['title'];
                 $transaction_id = $row['transaction_id'];
                 $status_id = $row['status_id'];
                 $billcode = $row['billcode'];
                 $order_id = $row['order_id'];
                 $total_paid = $row['total_paid'];
-                $paid_on =  $row['paid_on'];
-                // date("Y-m-d",$row['paid_on']) . " " . date("h:i:sa",$row['paid_on']) ;
-                // $msg = $_GET['msg'];
+                $paid_on =  $row['paid_on'];                
             }
         }
-
-
-
-
         ?>
         <form action="printreceipt.php" method="POST">
             <input name="event_title" hidden type="text" value="<?= $title ?>">
@@ -958,24 +864,10 @@ if ($_GET['page'] == 'info') {
 
     <?php  }
     $conn->close();
-
     ?>
-
     </form>
-
-
-
-
-
-
-
     </body>
-
-
-
-
     </html>
-
     <script>
         function counter() {
             return {

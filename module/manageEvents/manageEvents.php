@@ -372,7 +372,6 @@ class manageEvents
         fclose($file);
         return $final_data;
     }
-
     // else {
     //     $statusMsg = 'Please select a file to upload.';
     //     }
