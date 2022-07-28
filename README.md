@@ -1,2 +1,2 @@
 # ProdigyStudio
-Tgh setting lagi lmao 
+Still clearing repo . . .
