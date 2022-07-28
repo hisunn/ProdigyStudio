@@ -16,7 +16,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="Img/readmeLogo.jpg" alt="Logo" width="80" height="80" style="border-radius:50%">
+    <img src="Img/readmeLogo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Prodigy Studio Musical Management System</h3>
