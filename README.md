@@ -12,7 +12,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-https://www.linkedin.com/in/ihsan-dzahri-7095361a5/]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
