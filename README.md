@@ -108,7 +108,7 @@ To run this system locally, I recommend using laragon as the system is developed
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+_Below is the steps that should help you setup the system locally_
 
 1. Clone the repository into www/ folder in laragon
 2. use the .sql file to clone the database and its tables
@@ -133,10 +133,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- CONTACT -->
 ## Contact
+Hit me up !
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Ihsan Dzahri - [@hisunn](https://github.com/hisunn) 
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/hisunn/ProdigyStudio](https://github.com/hisunn/ProdigyStudio)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
