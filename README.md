@@ -10,8 +10,6 @@
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -27,8 +25,6 @@
     <a href="https://prodigystudio.live">View Demo (Active until 24/7/2022)</a>  
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -53,12 +49,11 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Prodigy Studio][product-screenshot]](./readme_content/Demo.gif) -->
+<div style="width:100%;height:0;padding-bottom:54%;position:relative;"><iframe src="https://giphy.com/embed/efe5NtTWgntQT3OVhF" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/efe5NtTWgntQT3OVhF">via GIPHY</a></p>
 
 * This project is a final year project made by Ihsan bin Dzahri for Universiti Tun Hussein Onn Malaysia (UTHM)
 * The time frame of the project development is during the pandemic
@@ -75,17 +70,22 @@ Therefore this project is born !
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 ### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![Laragon][Laragon.com]][Laragon-url]
+* [![Php][Php.net]][Php-url]
 * [![JQuery][JQuery.com]][JQuery-url]
+* [![Tailwind][Tailwindcss.com]][Tailwind-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![Html][Html.com]][Html-url]
+* [![Css][Css.com]][Css-url]
+* [![Npm][Npm.com]][Npm-url]
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -114,8 +114,13 @@ _Below is the steps that should help you setup the system locally_
 <!-- USAGE EXAMPLES -->
 ## Snapshot of System
 
-letak gamba plis
-
+![Home Screen](./readme_content/1.png)
+![Event Screen](./readme_content/5.png)
+![Login Screen](./readme_content/6.png)
+![Manage Event Screen](./readme_content/7.png)
+![Manage Event Screen](./readme_content/8.png)
+![Create Event Screen](./readme_content/9.png)
+![Create Event Screen](./readme_content/10.png)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -139,13 +144,15 @@ Project Link: [https://github.com/hisunn/ProdigyStudio](https://github.com/hisun
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 * [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
 * [Malven's Grid Cheatsheet](https://grid.malven.co/)
 * [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
 * [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [Png Repo](https://www.pngrepo.com/svg/21667/free)
+* [Svg Repo](https://www.svgrepo.com)
+* [Bootstrap Icon](https://icons.getbootstrap.com)
+* [Alpine Js](https://alpinejs.dev/)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -166,8 +173,19 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/ihsan-dzahri-7095361a5/
 [product-screenshot]: images/screenshot.png
-
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[JQuery-url]: https://jquery.com
+[Tailwindcss.com]:https://img.shields.io/badge/TailwindCSS-07b0ce?style=for-the-badge&logo=TailwindCSS&logoColor=white 
+[Tailwind-url]:https://tailwindcss.com/
+[Php.net]:https://img.shields.io/badge/PHP-697AB1?style=for-the-badge&logo=Php&logoColor=white
+[Php-url]:https://www.php.net/
+[Html.com]:https://img.shields.io/badge/HTML-e96228?style=for-the-badge&logo=Html5&logoColor=white
+[Html-url]:https://html.com/
+[Css.com]:https://img.shields.io/badge/CSS-2862e9?style=for-the-badge&logo=Css3&logoColor=white
+[Css-url]:https://developer.mozilla.org/en-US/docs/Web/CSS
+[Npm.com]:https://img.shields.io/badge/NPM-c53635?style=for-the-badge&logo=Npm&logoColor=white
+[Npm-url]:https://www.npmjs.com/
+[Laragon.com]:https://img.shields.io/badge/Laragon-36a4ff?style=for-the-badge&logo=Laragon&logoColor=white
+[Laragon-url]:https://laragon.org/

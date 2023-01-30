@@ -118,7 +118,7 @@ if (isset($_GET['page'])) {
         $billcode = $_GET['billcode'];
         $order_id = $_GET['order_id'];
         $status_id = $_GET['status_id'];
-        var_dump($status_id);       
+        // var_dump($status_id);       
        if($status_id == '3'){
         header('location:../views/manageEvent/eventcreationmain.php');
         die();
