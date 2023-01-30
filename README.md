@@ -52,8 +52,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- [![Prodigy Studio][product-screenshot]](./readme_content/Demo.gif) -->
-<div style="width:100%;height:0;padding-bottom:54%;position:relative;"><iframe src="https://giphy.com/embed/efe5NtTWgntQT3OVhF" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/efe5NtTWgntQT3OVhF">via GIPHY</a></p>
+[![Prodigy Studio][product-screenshot]](https://github.com/hisunn/ProdigyStudio/tree/master/readme_content/Demo.gif)
+
 
 * This project is a final year project made by Ihsan bin Dzahri for Universiti Tun Hussein Onn Malaysia (UTHM)
 * The time frame of the project development is during the pandemic
