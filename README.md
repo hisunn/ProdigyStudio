@@ -51,8 +51,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+<div align="center"><img src="./readme_content/Demo.gif" alt="Logo" width="1000"></div>
 
-[![Prodigy Studio][product-screenshot]](https://github.com/hisunn/ProdigyStudio/tree/master/readme_content/Demo.gif)
 
 
 * This project is a final year project made by Ihsan bin Dzahri for Universiti Tun Hussein Onn Malaysia (UTHM)
