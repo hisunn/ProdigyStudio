@@ -55,6 +55,7 @@
 <br>
 <div align="center"><img src="./readme_content/Demo.gif" alt="Logo"></div>
 <br>
+
 * This project is a final year project made by Ihsan bin Dzahri for Universiti Tun Hussein Onn Malaysia (UTHM)
 * The time frame of the project development is during the pandemic
 * By the time of you guys reading this readme, bear in mind some things may had became redundant
