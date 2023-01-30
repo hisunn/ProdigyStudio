@@ -50,8 +50,9 @@
 </details>
 <br>
 <!-- ABOUT THE PROJECT -->
-## About The Project
-<br> 
+
+###   About The Project
+<br>
 <div align="center"><img src="./readme_content/Demo.gif" alt="Logo"></div>
 <br>
 * This project is a final year project made by Ihsan bin Dzahri for Universiti Tun Hussein Onn Malaysia (UTHM)
