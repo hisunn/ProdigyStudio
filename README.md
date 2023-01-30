@@ -48,13 +48,12 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
+<br>
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<div align="center"><img src="./readme_content/Demo.gif" alt="Logo" width="1000"></div>
-
-
-
+<br> 
+<div align="center"><img src="./readme_content/Demo.gif" alt="Logo"></div>
+<br>
 * This project is a final year project made by Ihsan bin Dzahri for Universiti Tun Hussein Onn Malaysia (UTHM)
 * The time frame of the project development is during the pandemic
 * By the time of you guys reading this readme, bear in mind some things may had became redundant
@@ -72,8 +71,7 @@ Therefore this project is born !
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
+This project is built with a different kind of tools. Here's the list of the one I used to create this system.
 
 * [![Laragon][Laragon.com]][Laragon-url]
 * [![Php][Php.net]][Php-url]
@@ -141,7 +139,7 @@ Project Link: [https://github.com/hisunn/ProdigyStudio](https://github.com/hisun
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Here's are the lost of references i've used in creating this project. Thank you for visiting :smile:
 
 * [Choose an Open Source License](https://choosealicense.com)
 * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
